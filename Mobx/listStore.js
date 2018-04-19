@@ -1,16 +1,20 @@
 import {observable} from 'mobx'
 
-let index = 0
-
 class ObservableListStore {
   @observable allItems = ['nacho', 'burrito', 'hotdog']
+  @observable newItemName = ''
 
-  addItem (item) {
-    this.allItems.push(item)
+  addItem = () => {
+    this.allItems.push(this.newItemName)
+    this.newItemName = ''
   }
 
-  clear () {
+  clear = () => {
     this.allItems = []
+  }
+
+  setNewItemName = (value) => {
+    this.newItemName = value
   }
 
 }
