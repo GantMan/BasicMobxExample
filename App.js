@@ -21,7 +21,7 @@ export default class App extends Component {
         keyboardShouldPersistTaps='always'
       >
         <Text style={styles.welcome}>
-          Welcome to Redux
+          Welcome to MobX
         </Text>
         <AddItems />
         <ListItems />
