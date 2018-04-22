@@ -9,7 +9,7 @@ import {
   StyleSheet,
   Text,
   ScrollView
-} from 'react-native';
+} from 'react-native'
 import ListItems from './Components/listItems'
 import AddItems from './Components/addItems'
 

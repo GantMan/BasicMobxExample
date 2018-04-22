@@ -7,23 +7,30 @@ import {
   LayoutAnimation
 } from 'react-native'
 
+import MultiColumnButton from './multiButtonColumn'
+import SimpleList from './simpleList'
+
 import ListStore from '../Mobx/listStore'
 import {observer} from 'mobx-react/native'
 
 @observer
 export default class ListItems extends Component {
 
-  listItems = () => {
-    // window.alert(this.props.allItems)
-    LayoutAnimation.spring()
-    return ListStore.allItems.map(item => <Text key={item}>{item}</Text>)
-  }
-
   render() {
+    LayoutAnimation.spring()
     return (
         <View>
-          { this.listItems() }
+          <SimpleList value={[...ListStore.allItems]} />
         </View>
     )
+    // return (
+    //     <View>
+    //       <MultiColumnButton
+    //         value={
+    //           ListStore.allItems.map(item => ({value: item, active: Math.round(Math.random() * 10) % 2 === 0}))
+    //         }
+    //       />
+    //     </View>
+    // )
   }
 }
