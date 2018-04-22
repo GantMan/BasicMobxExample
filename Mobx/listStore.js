@@ -19,6 +19,5 @@ class ObservableListStore {
 
 }
 
-
 const observableListStore = new ObservableListStore()
 export default observableListStore
